@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        .form-container {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+        .registration-form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .registration-form-container h2 {
+            text-align: center;
+        }
+        .registration-form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .registration-form-container input,
+        .registration-form-container select,
+        .registration-form-container button {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .registration-form-container input[type="checkbox"],
+        .registration-form-container input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .registration-form-container .checkbox-container,
+        .registration-form-container .radio-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .registration-form-container .checkbox-container label,
+        .registration-form-container .radio-container label {
+            margin-right: 15px;
+        }
+        .registration-form-container button {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .registration-form-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="login.js" method="post">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="login-email" placeholder="Enter your Email"><br><br>
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="login-password" placeholder="Enter your Password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>Signup</h2>
+        <form action="signup.js" method="post">
+            <label for="signup-name">Name</label>
+            <input type="text" id="signup-name" name="signup-name" placeholder="Enter your Name" required><br><br>
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="signup-email" placeholder="Enter your Email" required><br><br>
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="signup-password" placeholder="Enter your Password" required><br><br>
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+
+    <div class="registration-form-container">
+        <h2>Registration Form</h2>
+        <form action="main.js" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <label for="color">Favorite Color</label>
+            <input type="color" id="color" name="color" style="height: 50px;">
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+            
+            <label for="appointment">Appointment Date and Time</label>
+            <input type="datetime-local" id="appointment" name="appointment">
+            
+            <label for="time">Preferred Contact Time</label>
+            <input type="time" id="time" name="time">
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age">
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            
+            <label for="birth-month">Birth Month</label>
+            <input type="month" id="birth-month" name="birth-month">
+            
+            <label for="birth-week">Birth Week</label>
+            <input type="week" id="birth-week" name="birth-week">
+            
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website" placeholder="Enter your website URL">
+            
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search" placeholder="Search...">
+            
+            <label for="profile-pic">Profile Picture</label>
+            <input type="file" id="profile-pic" name="profile-pic">
+            
+            <label for="gender">Gender:</label>
+            <div class="radio-container">
+                <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other"> <label for="other">Other</label>
+            </div>
+            
+            <label for="interests">Interests:</label>
+            <div class="checkbox-container">
+                <input type="checkbox" id="coding" name="interests" value="coding"> <label for="coding">Coding</label>
+                <input type="checkbox" id="sports" name="interests" value="sports"> <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="interests" value="music"> <label for="music">Music</label>
+            </div>
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
